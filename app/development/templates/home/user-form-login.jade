@@ -1,0 +1,26 @@
+.user-form-login
+  div.container(layout='row',layout-align='center center')
+    md-content.md-padding(layout-xs='column',layout='row')
+      div(flex-xs,layout='colmun')
+        md-card
+          md-card-title
+            md-card-title-text
+              span(class='md-headline',id='gbm_login_title') Global Mouth
+              span.md-subhead Identify
+                form(name='projectForm')
+                  md-input-container.md-block
+                    label Username
+                    input(md-maxlength='30', required, md-no-asterisk, id='username', name='username', ng-model='form.username')
+                    div(ng-messages='projectForm.username.$error')
+                      div(ng-message='required') This is required.
+                      div(ng-message='md-maxlength') The name has to be less than 30 characters log.
+            md-card-title-media
+              div(class='md-media-lg card-media')
+            md-card-actions(layout='row',layout-align='center center')
+              md-button(class='md-raised md-primary',ng-click='login()',id='btn_login') Log in
+          md-toolbar.md-hue-2( ng-show='loadding')
+            .md-toolbar-tools
+              md-progress-linear(md-mode='query')
+          md-toolbar.md-warn( ng-show='!loadding && error')
+            .md-toolbar-tools
+              h6 {{error}}

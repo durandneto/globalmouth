@@ -1,0 +1,12 @@
+loader
+h1.hd Global Mouth test HTML5/Microdata/SEO
+div(layout='column', ng-cloak,ng-show='user.data')
+  md-toolbar.md-hue-2
+    .md-toolbar-tools
+      h2(class='md-flex gbm_title') Global Mouth App Sport Poll
+      span(flex)
+      md-button(ng-click='logout()',id='nav-btn_logout') 
+        span(id='nav-userinfo') {{user.data.username}} ( Points : {{user.data.points || 0}} )
+        sub
+          sub
+            i.material-icons power_settings_new

@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "angular-ui-router": "^1.0.0-alpha.3",
+    "browserify": "10.2.3",
+    "gulp": "3.8.11",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "0.5.1",
+    "gulp-copy2": "^0.2.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jsdoc": "^0.1.5",
+    "gulp-sass": "^2.2.0",
+    "http-status": "0.1.8", 
+    "underscore": "1.5.2"
+  },
+  "dependencies": {
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-material": "^1.0.7",
+    "angular-messages": "^1.5.3"
+  }
+}

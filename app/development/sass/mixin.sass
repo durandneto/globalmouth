@@ -1,0 +1,53 @@
+@mixin border($size,$color)
+  border: solid $size $color
+
+@mixin getPadding()
+  @media screen and (max-width: $break-small)
+    padding : 20% 6.5% 
+  @media screen and (min-width: $break-small)
+    padding : 40% 13%
+  @media screen and (min-width: $break-large)
+    padding : 15% 5%
+
+@mixin boxCenter()
+  position : absolute
+  left : 50%
+  top : 50%
+  @media screen and (max-width: $break-small)
+    $width : 200px
+    $height : $width
+    width : $width
+    height : $height
+    margin-left :  -$width/2
+    margin-top : -$height/2
+  @media screen and (min-width: $break-small)
+    $width : 400px
+    $height : $width
+    width : $width
+    height : $height
+    margin-left :  -$width/2 
+    margin-top : -$height/2
+  @media screen and (min-width: $break-large)
+    $width : 400px
+    $height : $width
+    width : $width
+    height : $height
+    margin-left :  -$width/2
+    margin-top : -$height/2
+
+@mixin radius($radius) 
+  -moz-border-radius: $radius + px
+  -webkit-border-radius: $radius + px
+  border-radius: $radius + px
+
+@mixin circle($radius) 
+  width: $radius + px 
+  height: $radius + px 
+  background-color: $color-pink
+  -moz-border-radius: $radius/2 + px
+  -webkit-border-radius: $radius/2 + px
+  border-radius: $radius/2 + px
+  shape-outside: circle(50%)
+  padding:  $radius/4 + px
+  img
+    width : $radius/2 + px

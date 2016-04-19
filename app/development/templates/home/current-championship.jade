@@ -1,0 +1,22 @@
+.current-championship
+  md-toolbar.md-hue-1
+    .md-toolbar-tools
+      h2
+        span {{user.championship[0].championship_name}}
+      span(flex)
+      md-button.md-raised(aria-label="Start Round",ng-click='startMatch()', ng-show='time==0') Start Round
+      p(ng-hide='time==0') {{message_match}}
+      p(ng-hide='time==0') {{time}} min
+      md-progress-circular(md-mode="determinate", value="{{time}}",ng-hide='time==0')
+  section(layout="row", layout-sm="column", layout-align="center center", layout-wrap,ng-repeat='match in user.championship')
+    figure
+      img(ng-src="{{ match.team_home_cover_src }}" ,width=50, height = 50)
+      figcaption {{ match.team_home_goals || 0 }}
+    span X
+    figure
+      img(ng-src="{{ match.team_challenger_cover_src }}" ,width=50) 
+      figcaption {{ match.team_challenger_goals || 0}}
+    md-button(class="md-primary md-hue-1 btn_user_choice",ng-click="bet(match,'HOME')",ng-class="{'md-raised':match.user_bet=='HOME'}") Home
+    md-button(class="md-primary md-hue-1 btn_user_choice ",ng-click="bet(match,'DRAW')",ng-class="{'md-raised':match.user_bet=='DRAW'}") Draw
+    md-button(class="md-primary md-hue-1 btn_user_choice",ng-click="bet(match,'CHALLENGER')",ng-class="{'md-raised':match.user_bet=='CHALLENGER'}") Challenger
+    .label {{match.team_home_name}} X {{match.team_challenger_name}}

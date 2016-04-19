@@ -1,0 +1,7 @@
+{ 
+  "jwtTokenSecret": "durand_gobalmouth"
+  , "UserSchema" : {
+     "username" : ""
+     , "current_session" : ""
+  } 
+}
