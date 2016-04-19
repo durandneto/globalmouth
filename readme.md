@@ -16,7 +16,6 @@ cd app/dist && python -m SimpleHTTPServer
 http://0.0.0.0:8000
 
 # Install Protractor
-<p>Install Protractor</p>
 http://angular.github.io/protractor/#/
 
 # Run tests
